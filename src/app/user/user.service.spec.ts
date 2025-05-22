@@ -44,4 +44,3 @@ describe('UserService', () => {
     req.flush(dummyResponse);
   });
 });
-

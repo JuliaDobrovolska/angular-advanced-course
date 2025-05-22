@@ -1,10 +1,16 @@
 import {TestBed} from '@angular/core/testing';
 import {AppComponent} from './app.component';
+import {provideHttpClient, withFetch} from '@angular/common/http';
+import {provideRouter} from '@angular/router';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [AppComponent],
+      providers: [
+        provideHttpClient(withFetch()),  // Новый способ предоставления HttpClient
+        provideRouter([])               // Новый способ предоставления Router
+      ],
     }).compileComponents();
   });
 
