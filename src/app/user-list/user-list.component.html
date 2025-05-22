@@ -1,0 +1,18 @@
+<h1 nz-typography>User list</h1>
+<nz-table #basicTable [nzData]="users">
+  <thead>
+  <tr>
+    <th>FirstName</th>
+    <th>LastName</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let user of basicTable.data" [routerLink]="'/user/'+user.id">
+    <td>{{ user.firstName }}</td>
+    <td>{{ user.lastName }}</td>
+  </tr>
+  </tbody>
+</nz-table>
+
+
+

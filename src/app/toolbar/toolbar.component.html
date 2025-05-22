@@ -1,0 +1,23 @@
+<nav>
+  <ul nz-menu nzMode="horizontal">
+    <li nz-menu-item nzSelected routerLink="/home" nzMatchRouter="/home">
+      <nz-icon nzType="home"/>
+      Home
+    </li>
+    <li nz-menu-item routerLink="/user" nzMatchRouter="/user">
+      <nz-icon nzType="user"/>
+      Users
+    </li>
+    <li nz-submenu nzTitle="About" nzIcon="info-circle">
+      <ul>
+        <li nz-menu-item routerLink="/about/info" nzMatchRouter="/about/info">
+          Info
+        </li>
+        <li nz-menu-item routerLink="/about/contact" nzMatchRouter="/about/contact">
+          Contacts
+        </li>
+      </ul>
+    </li>
+
+  </ul>
+</nav>

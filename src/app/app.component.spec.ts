@@ -8,8 +8,8 @@ describe('AppComponent', () => {
     await TestBed.configureTestingModule({
       imports: [AppComponent],
       providers: [
-        provideHttpClient(withFetch()),  // Новый способ предоставления HttpClient
-        provideRouter([])               // Новый способ предоставления Router
+        provideHttpClient(withFetch()),
+        provideRouter([])
       ],
     }).compileComponents();
   });
