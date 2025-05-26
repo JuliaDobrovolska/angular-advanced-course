@@ -1,11 +1,7 @@
 import {Component, inject, OnDestroy, OnInit} from '@angular/core';
-import {NzTableComponent, NzTableModule} from 'ng-zorro-antd/table';
-import {NgForOf} from '@angular/common';
 import {Subject, takeUntil} from 'rxjs';
 import {User} from '../../models/user.module';
-import {ActivatedRoute, RouterLink} from '@angular/router';
-import {NzLayoutModule} from 'ng-zorro-antd/layout';
-import {NzTypographyComponent} from 'ng-zorro-antd/typography';
+import {ActivatedRoute} from '@angular/router';
 
 
 @Component({

@@ -1,4 +1,4 @@
-import { MaskEmailPipe } from './mask-email.pipe';
+import {MaskEmailPipe} from './mask-email.pipe';
 
 describe('MaskEmailPipe', () => {
   it('create an instance', () => {

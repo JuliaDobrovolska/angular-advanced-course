@@ -1,11 +1,7 @@
 import {Component, inject, OnInit} from '@angular/core';
 import {UserService} from '../../services/user.service';
 import {ActivatedRoute} from '@angular/router';
-import {JsonPipe} from '@angular/common';
-import {NzCardComponent, NzCardMetaComponent} from 'ng-zorro-antd/card';
 import {User} from '../../models/user.module';
-import {MaskEmailPipe} from '../../../shared/pipes/mask-email.pipe';
-import {SharedModule} from '../../../shared/shared.module';
 
 @Component({
   selector: 'app-user-info',
