@@ -1,17 +1,16 @@
-import {ApplicationConfig, provideZoneChangeDetection, importProvidersFrom} from '@angular/core';
+import {ApplicationConfig, importProvidersFrom, provideZoneChangeDetection} from '@angular/core';
 import {provideRouter} from '@angular/router';
 
 import {routes} from './app.routes';
 import {provideClientHydration, withEventReplay,} from '@angular/platform-browser';
 import {provideHttpClient, withInterceptors} from '@angular/common/http';
 import {appIdInterceptor} from './core/interceptors/app-id.interceptor';
-import { uk_UA, provideNzI18n } from 'ng-zorro-antd/i18n';
-import { registerLocaleData } from '@angular/common';
+import {provideNzI18n, uk_UA} from 'ng-zorro-antd/i18n';
+import {registerLocaleData} from '@angular/common';
 import uk from '@angular/common/locales/uk';
-import { FormsModule } from '@angular/forms';
-import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import {FormsModule} from '@angular/forms';
+import {provideAnimationsAsync} from '@angular/platform-browser/animations/async';
 import {errorInterceptor} from './core/interceptors/error.interceptor';
-import {provideServerRendering} from '@angular/platform-server';
 
 registerLocaleData(uk);
 

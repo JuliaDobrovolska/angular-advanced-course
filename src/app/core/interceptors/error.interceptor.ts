@@ -1,8 +1,8 @@
-import { HttpInterceptorFn, HttpErrorResponse } from '@angular/common/http';
-import { inject } from '@angular/core';
-import { catchError } from 'rxjs/operators';
-import { throwError } from 'rxjs';
-import { NzMessageService } from 'ng-zorro-antd/message';
+import {HttpErrorResponse, HttpInterceptorFn} from '@angular/common/http';
+import {inject} from '@angular/core';
+import {catchError} from 'rxjs/operators';
+import {throwError} from 'rxjs';
+import {NzMessageService} from 'ng-zorro-antd/message';
 
 export const errorInterceptor: HttpInterceptorFn = (req, next) => {
   const messageService = inject(NzMessageService);
