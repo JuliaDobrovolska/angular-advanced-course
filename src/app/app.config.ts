@@ -11,19 +11,22 @@ import uk from '@angular/common/locales/uk';
 import {FormsModule} from '@angular/forms';
 import {provideAnimationsAsync} from '@angular/platform-browser/animations/async';
 import {errorInterceptor} from './core/interceptors/error.interceptor';
+import {provideStore} from '@ngrx/store';
+import {provideEffects} from '@ngrx/effects';
+import {userReducer} from './store/reducers/user.reducer';
+import {UserEffects} from './store/effects/user.effect';
 
 registerLocaleData(uk);
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideZoneChangeDetection({ eventCoalescing: true }),
+    provideZoneChangeDetection({eventCoalescing: true}),
     provideRouter(routes),
     provideClientHydration(withEventReplay()),
-    provideHttpClient(
-      withInterceptors([appIdInterceptor, errorInterceptor])
-    ), provideNzI18n(uk_UA),
+    provideHttpClient(withInterceptors([appIdInterceptor, errorInterceptor])), provideNzI18n(uk_UA),
     importProvidersFrom(FormsModule),
-    provideAnimationsAsync()
-
+    provideAnimationsAsync(),
+    provideStore({users: userReducer}),
+    provideEffects(UserEffects)
   ],
 };

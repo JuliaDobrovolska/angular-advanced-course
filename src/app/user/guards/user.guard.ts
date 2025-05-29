@@ -5,10 +5,10 @@ import {inject} from '@angular/core';
 export const userGuard: CanActivateFn = (route, state) => {
   const authService: AuthService = inject(AuthService);
   const router: Router = inject(Router);
-  if (authService.isLoggedIn()) {
-    return true;
-  }
-  router.navigate(['accessDenied']);
-  return false;
+  // if (authService.isLoggedIn()) {
+  return true;
+  // }
+  // router.navigate(['accessDenied']);
+  // return false;
 };
 

@@ -1,5 +1,7 @@
 <h1 nz-typography>User list</h1>
-<nz-table #basicTable [nzData]="users">
+
+<div *ngIf="loading$ | async">Loading...</div>
+<nz-table #basicTable >
   <thead>
   <tr>
     <th>FirstName</th>
@@ -7,12 +9,13 @@
   </tr>
   </thead>
   <tbody>
-  <tr *ngFor="let user of basicTable.data" [routerLink]="'/user/'+user.id">
+  <tr *ngFor="let user of users$ | async" [routerLink]="'/user/'+user.id">
     <td>{{ user.firstName }}</td>
     <td>{{ user.lastName }}</td>
   </tr>
   </tbody>
 </nz-table>
 
+<button (click)="loadUsers()">loadUsers</button>
 
 
