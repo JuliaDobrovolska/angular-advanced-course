@@ -15,7 +15,6 @@ import {UserState} from '../../../store/reducers/user.reducer';
   styleUrl: './user-list.component.scss'
 })
 export class UserListComponent implements OnInit, OnDestroy {
-  private readonly route: ActivatedRoute = inject(ActivatedRoute);
 
   private readonly destroy$ = new Subject<void>();
   users$: Observable<User[]>;

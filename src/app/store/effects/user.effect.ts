@@ -1,4 +1,4 @@
-import {Injectable} from '@angular/core';
+import {inject, Injectable} from '@angular/core';
 import {Actions, createEffect, ofType} from '@ngrx/effects';
 import {UserService} from '../../user/services/user.service';
 import * as UserActions from '../actions/user.action';
@@ -9,9 +9,9 @@ import {catchError} from 'rxjs/operators';
 @Injectable()
 export class UserEffects {
 
-  constructor(private actions$: Actions,
-              private userService: UserService) {
-  }
+  actions$ = inject(Actions)
+  userService = inject(UserService);
+
 
   loadUsers$ = createEffect(() =>
     this.actions$.pipe(
