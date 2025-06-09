@@ -5,7 +5,7 @@ import {User} from '../../models/user.module';
 
 @Component({
   selector: 'app-user-info',
-  
+  standalone:false,
   templateUrl: './user-info.component.html',
   styleUrl: './user-info.component.scss'
 })

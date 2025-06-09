@@ -4,9 +4,10 @@ import {MaskEmailPipe} from './pipes/mask-email.pipe';
 
 
 @NgModule({
-  declarations: [MaskEmailPipe],
+  declarations: [],
   imports: [
-    CommonModule
+    CommonModule,
+    MaskEmailPipe
   ],
   exports:[MaskEmailPipe]
 })
