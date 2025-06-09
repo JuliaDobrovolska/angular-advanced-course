@@ -6,7 +6,7 @@ import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-user-list',
-  standalone: false,
+  
   templateUrl: './user-list.component.html',
   styleUrl: './user-list.component.scss'
 })
