@@ -7,7 +7,7 @@
   </tr>
   </thead>
   <tbody>
-  <tr *ngFor="let user of basicTable.data" [routerLink]="'/user/'+user.id">
+  <tr *ngFor="let user of basicTable.data, trackBy trackByFn" [routerLink]="'/user/'+user.id">
     <td>{{ user.firstName }}</td>
     <td>{{ user.lastName }}</td>
   </tr>
