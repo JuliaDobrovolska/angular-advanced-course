@@ -8,7 +8,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:angular-advanced-course": "node dist/angular-advanced-course/server/server.mjs",
-    "prepare": "husky"
+    "prepare": "husky install",
+    "test:ci": "ng test --watch=false --browsers=ChromeHeadlessCI"
   },
   "private": true,
   "dependencies": {
@@ -32,7 +33,7 @@
     "zone.js": "~0.15.0"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^19.2.12",
+    "@angular-devkit/build-angular": "^19.2.14",
     "@angular/cli": "^19.2.12",
     "@angular/compiler-cli": "^19.2.12",
     "@eslint/js": "^9.26.0",
